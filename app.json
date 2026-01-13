@@ -6,7 +6,7 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "newArchEnabled": false,
+    "newArchEnabled": true,
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
@@ -33,12 +33,12 @@
         "expo-build-properties",
         {
           "ios": {
-            "newArchEnabled": false,
-            "hermesEnabled": false
+            "newArchEnabled": true,
+            "hermesEnabled": true
           },
           "android": {
-            "newArchEnabled": false,
-            "hermesEnabled": false
+            "newArchEnabled": true,
+            "hermesEnabled": true
           }
         }
       ]
