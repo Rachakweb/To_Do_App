@@ -57,11 +57,17 @@ export const HomeScreen = () => {
             <StatusBar barStyle="light-content" />
 
             <View style={styles.header}>
-                <View>
-                    <Text style={styles.greeting}>Hello, {userProfile.name.split(' ')[0]}!</Text>
-                    <Text style={styles.subtitle}>
-                        {completedCount}/{tasks.length} tasks completed
-                    </Text>
+                <View style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+                    <Image
+                        source={require('../../assets/icon.png')}
+                        style={{ width: 45, height: 45, borderRadius: 10 }}
+                    />
+                    <View>
+                        <Text style={styles.greeting}>Hello, {userProfile.name.split(' ')[0]}!</Text>
+                        <Text style={styles.subtitle}>
+                            {completedCount}/{tasks.length} tasks completed
+                        </Text>
+                    </View>
                 </View>
                 <TouchableOpacity
                     style={styles.profileButton}

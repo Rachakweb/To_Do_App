@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { View, Text, StyleSheet, Dimensions } from 'react-native';
+import { View, Text, StyleSheet, Dimensions, Image } from 'react-native';
 import Animated, {
     useSharedValue,
     useAnimatedStyle,
@@ -22,19 +22,22 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onFinish }) => {
     const opacityValues = categories.map(() => useSharedValue(0));
     const scaleValues = categories.map(() => useSharedValue(0.8));
     const rakOpacity = useSharedValue(0);
+    const logoOpacity = useSharedValue(0);
 
     useEffect(() => {
-        // Sequence animations
+        // Logo and Categories appearance
+        logoOpacity.value = withTiming(1, { duration: 1000 });
+
         categories.forEach((_, index) => {
             opacityValues[index].value = withDelay(
-                index * 800,
+                index * 800 + 400,
                 withSequence(
                     withTiming(1, { duration: 600 }),
                     withDelay(400, withTiming(0.3, { duration: 600 }))
                 )
             );
             scaleValues[index].value = withDelay(
-                index * 800,
+                index * 800 + 400,
                 withTiming(1, { duration: 600, easing: Easing.out(Easing.back(1.5)) })
             );
         });
@@ -53,8 +56,18 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onFinish }) => {
         );
     }, []);
 
+    const logoAnimatedStyle = useAnimatedStyle(() => ({
+        opacity: logoOpacity.value,
+        transform: [{ scale: withTiming(logoOpacity.value === 1 ? 1 : 0.8, { duration: 1000 }) }],
+        marginBottom: 40,
+    }));
+
     return (
         <View style={styles.container}>
+            <Animated.Image
+                source={require('../../assets/icon.png')}
+                style={[styles.logo, logoAnimatedStyle]}
+            />
             <View style={styles.content}>
                 {categories.map((cat, index) => {
                     const animatedStyle = useAnimatedStyle(() => ({
@@ -85,6 +98,11 @@ const styles = StyleSheet.create({
         backgroundColor: theme.colors.background,
         justifyContent: 'center',
         alignItems: 'center',
+    },
+    logo: {
+        width: 100,
+        height: 100,
+        borderRadius: 20,
     },
     content: {
         height: 100,

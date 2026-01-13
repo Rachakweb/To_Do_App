@@ -27,7 +27,7 @@ function App() {
         marginBottom: '4rem'
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
-          <img src="/logo.png" alt="Logo" style={{ width: '40px', height: '40px', borderRadius: '10px' }} />
+          <img src="/logo.png" alt="Logo" style={{ width: '50px', height: '50px', borderRadius: '12px', objectFit: 'contain' }} />
           <span style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>Aura TO-DO</span>
         </div>
         <a href="#download" className="btn-primary" style={{ padding: '8px 24px', fontSize: '0.9rem' }}>
@@ -58,6 +58,17 @@ function App() {
             marginBottom: '1rem',
             display: 'block'
           }}>By Rak Studio</span>
+          <img
+            src="/logo.png"
+            alt="Aura TO-DO Logo"
+            style={{
+              width: '120px',
+              height: '120px',
+              margin: '0 auto 2rem',
+              borderRadius: '24px',
+              boxShadow: '0 0 30px rgba(167, 139, 250, 0.3)'
+            }}
+          />
           <h1 className="section-title">Aura TO-DO</h1>
           <h2 style={{ fontSize: '2rem', marginBottom: '2rem', background: 'linear-gradient(to right, #fff, var(--text-dim))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Master Your Day with Minimalist Focus</h2>
           <p style={{
