@@ -163,7 +163,7 @@ function App() {
         </p>
         <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
           <div style={{ textAlign: 'center' }}>
-            <a href="https://exp-artifacts.s3.amazonaws.com/artifacts/eas/iuggDhDYwynZMxhrt9qeEq.apk" className="btn-primary" style={{ fontSize: '1.1rem', padding: '16px 48px' }}>
+            <a href="https://expo.dev/artifacts/eas/iuggDhDYwynZMxhrt9qeEq.apk" className="btn-primary" style={{ fontSize: '1.1rem', padding: '16px 48px' }}>
               <Download size={24} /> Download APK (Direct)
             </a>
             <p style={{ marginTop: '1rem', fontSize: '0.8rem', color: 'var(--text-dim)' }}>Version 1.1.0 • Aura TO-DO</p>
