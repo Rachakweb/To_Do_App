@@ -26,19 +26,9 @@ function App() {
         padding: '2rem 0',
         marginBottom: '4rem'
       }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <div style={{
-            width: '40px',
-            height: '40px',
-            background: 'var(--primary)',
-            borderRadius: '10px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            fontWeight: 'bold',
-            color: '#000'
-          }}>A</div>
-          <span style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>Aura To-Do</span>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+          <img src="/logo.png" alt="Logo" style={{ width: '40px', height: '40px', borderRadius: '10px' }} />
+          <span style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>Aura TO-DO</span>
         </div>
         <a href="#download" className="btn-primary" style={{ padding: '8px 24px', fontSize: '0.9rem' }}>
           Get App
@@ -68,7 +58,8 @@ function App() {
             marginBottom: '1rem',
             display: 'block'
           }}>By Rak Studio</span>
-          <h1 className="section-title">Master Your Day with Minimalist Focus</h1>
+          <h1 className="section-title">Aura TO-DO</h1>
+          <h2 style={{ fontSize: '2rem', marginBottom: '2rem', background: 'linear-gradient(to right, #fff, var(--text-dim))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Master Your Day with Minimalist Focus</h2>
           <p style={{
             fontSize: '1.25rem',
             color: 'var(--text-dim)',
@@ -172,10 +163,10 @@ function App() {
         </p>
         <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
           <div style={{ textAlign: 'center' }}>
-            <a href="https://expo.dev/accounts/rakhack/projects/aura-todo/builds/e6f7a37b-3ead-4a8b-a56f-f5166755f74d" target="_blank" className="btn-primary" style={{ fontSize: '1.1rem', padding: '16px 48px' }}>
-              <Download size={24} /> Get Android APK
+            <a href="https://exp-artifacts.s3.amazonaws.com/artifacts/eas/iuggDhDYwynZMxhrt9qeEq.apk" className="btn-primary" style={{ fontSize: '1.1rem', padding: '16px 48px' }}>
+              <Download size={24} /> Download APK (Direct)
             </a>
-            <p style={{ marginTop: '1rem', fontSize: '0.8rem', color: 'var(--text-dim)' }}>Version 1.0.0 • Size: 15MB</p>
+            <p style={{ marginTop: '1rem', fontSize: '0.8rem', color: 'var(--text-dim)' }}>Version 1.1.0 • Aura TO-DO</p>
           </div>
         </div>
       </section>
