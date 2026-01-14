@@ -59,8 +59,8 @@ export const HomeScreen = () => {
             <View style={styles.header}>
                 <View style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
                     <Image
-                        source={require('../../assets/icon.png')}
-                        style={{ width: 45, height: 45, borderRadius: 10 }}
+                        source={require('../../assets/logo-symbol.png')}
+                        style={{ width: 45, height: 45, borderRadius: 12 }}
                     />
                     <View>
                         <Text style={styles.greeting}>Hello, {userProfile.name.split(' ')[0]}!</Text>
@@ -178,7 +178,7 @@ const styles = StyleSheet.create({
     profileImage: {
         width: '100%',
         height: '100%',
-        borderRadius: 20,
+        borderRadius: 22,
     },
     searchSection: {
         paddingHorizontal: theme.spacing.lg,

@@ -65,7 +65,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onFinish }) => {
     return (
         <View style={styles.container}>
             <Animated.Image
-                source={require('../../assets/icon.png')}
+                source={require('../../assets/logo-full.png')}
                 style={[styles.logo, logoAnimatedStyle]}
             />
             <View style={styles.content}>

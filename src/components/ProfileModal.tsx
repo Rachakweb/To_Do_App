@@ -230,7 +230,7 @@ const styles = StyleSheet.create({
     mainAvatar: {
         width: '100%',
         height: '100%',
-        borderRadius: 56,
+        borderRadius: 60,
     },
     avatarPlaceholder: {
         backgroundColor: theme.colors.card,
@@ -283,7 +283,7 @@ const styles = StyleSheet.create({
     avatarImage: {
         width: '100%',
         height: '100%',
-        borderRadius: 33,
+        borderRadius: 35,
     },
     checkBadge: {
         position: 'absolute',
